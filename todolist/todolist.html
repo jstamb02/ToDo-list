@@ -1,0 +1,28 @@
+<head>
+  <title>Todo List</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>To Do List</h1>
+      <form class="new-item">
+        <input type="text" name="text" placeholder="Add item"/>
+      </form>
+    </header>
+
+   <ul class="nav nav-pills nav-stacked">
+      {{#each items}}
+        {{> item}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="item">
+  <li>
+    <button class="delete">&times;</button>
+    <span class="text">{{text}}</span>
+  </li>
+</template>
+
